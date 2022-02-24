@@ -48,10 +48,6 @@ export class AddressesService {
       personId,
     } = data;
 
-    // if (!street) {
-    //   throw new BadRequestException('Street is required');
-    // }
-
     const { id } = await this.prismaService.user.findUnique({
       where: {
         id: Number(personId),
